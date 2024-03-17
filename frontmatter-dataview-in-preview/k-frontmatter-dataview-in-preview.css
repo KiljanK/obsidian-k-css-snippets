@@ -1,0 +1,58 @@
+/* Showing the YAML Frontmatter in hover-previews, if created by a special dataview query */
+
+/* Styling the general box */
+.dataview-frontmatter {
+	display: none;
+	font-size: 0.8em;
+	background-color: rgba(100, 100, 100, 0.1);
+	border-radius: 15px;
+	padding: 0.5em;
+}
+
+/* Removing any auto-generated list lines */
+.dataview-frontmatter ul:before {
+	content: none !important;
+}
+
+/* Removing the indentation that was left (literally) */
+.dataview-frontmatter ul:not(.d-f-value) {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+/* Making alignment modifications to the individual rows*/
+.dataview-frontmatter ul li {
+	display: flex;
+	align-items: baseline;
+}
+
+/* Giving Colors to the keys */
+.dataview-frontmatter .d-f-key {
+	color: rgba(179, 179, 179, 0.55);
+	width: 30%;
+}
+
+/* Giving brighter colors to the values*/
+.dataview-frontmatter .d-f-value {
+	color: rgb(255, 255, 255);
+	width: 70%;
+}
+
+/* Making nested value lists display in a wrapping row */
+.dataview-frontmatter ul.d-f-value {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	gap: 0.5em;
+}
+
+.dataview-frontmatter li.d-f-value-tag {
+	padding: 0.2em 0.5em;
+	color: #A68AF9 !important;
+}
+
+/* Only showing the whole thing in the wanted contexts */
+.markdown-embed-content .dataview-frontmatter,
+.gallery-box-preview .dataview-frontmatter {
+	display: block !important;
+}
