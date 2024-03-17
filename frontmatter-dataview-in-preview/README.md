@@ -28,11 +28,11 @@ When you want a file's YAML Frontmatter to be seen in the previously mentioned p
 If you want to enable this across all files, you can probably use an editor such as [Visual Studio Code](https://code.visualstudio.com) in order to regex through all your files and insert the Template's text right below each Frontmatter section.
 
 ## How to selectively display Properties:
-It is possible to limit, which properties are shown. To do this, add another list property to the note, called `d-f-show`. Within this list property, add all the property names you want to be shown in the previews/embeds. Pretty self-explanatory.
+It is possible to limit which properties are shown. To do this, add another list property to the note, called either `d-f-show` or `d-f-hide`. Within this list property, add all the names of properties that you want to be shown/hidden in the previews and embeds. You can use both of these lists in the same note, even though that would be kind of unnecessary. If you do, note that `d-f-show` is evaluated before `d-f-hide`.
 
-Please note that this will only take effect, if:
-- The property `d-f-show` isn't empty
-- The list inside `d-f-show` isn't empty
-- The list inside `d-f-show` doesn't contain a `null`
+Please note that these lists will only take effect, if:
+- The property `d-f-show`/`d-f-hide` isn't empty
+- The list inside `d-f-show`/`d-f-hide` isn't empty
+- The list inside `d-f-show`/`d-f-hide` doesn't contain a `null`
 
-The last two points can be checked by looking at the source view of the YAML Frontmatter. To do this, go into editing mode (`ctrl+E` or `cmd+E`) and toggle on the [source mode](https://notes.nicolevanderhoeven.com/obsidian-playbook/Using+Obsidian/02+Making+Notes+in+Obsidian/Views+in+Obsidian#Source+mode). Then, check the raw text of the `d-f-show` property. It should NOT be an empty list (`[]`). If it has bullet points, none of them should be empty.
+The last two points can be checked by looking at the source view of the YAML Frontmatter. To do this, go into editing mode (`ctrl+E` or `cmd+E`) and toggle on the [source mode](https://notes.nicolevanderhoeven.com/obsidian-playbook/Using+Obsidian/02+Making+Notes+in+Obsidian/Views+in+Obsidian#Source+mode). Then, check the raw text of the `d-f-show` or `d-f-hide` property. It should NOT be an empty list (`[]`). If it has bullet points, none of them should be empty.
