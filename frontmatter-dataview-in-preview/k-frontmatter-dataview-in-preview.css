@@ -16,6 +16,7 @@
 
 /* Giving more space to the values */
 .dataview-frontmatter td {
+	vertical-align: baseline;
 	width: 70%;
 }
 

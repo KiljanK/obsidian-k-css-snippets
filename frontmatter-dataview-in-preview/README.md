@@ -26,3 +26,13 @@ When you want a file's YAML Frontmatter to be seen in the previously mentioned p
 3. Insert the Template (`ctrl+P` or `cmd+P`, then type _"insert template"_ and select the Template)
 
 If you want to enable this across all files, you can probably use an editor such as [Visual Studio Code](https://code.visualstudio.com) in order to regex through all your files and insert the Template's text right below each Frontmatter section.
+
+## How to selectively display Properties:
+It is possible to limit, which properties are shown. To do this, add another list property to the note, called `d-f-show`. Within this list property, add all the property names you want to be shown in the previews/embeds. Pretty self-explanatory.
+
+Please note that this will only take effect, if:
+- The property `d-f-show` isn't empty
+- The list inside `d-f-show` isn't empty
+- The list inside `d-f-show` doesn't contain a `null`
+
+The last two points can be checked by looking at the source view of the YAML Frontmatter. To do this, go into editing mode (`ctrl+E` or `cmd+E`) and toggle on the [source mode](https://notes.nicolevanderhoeven.com/obsidian-playbook/Using+Obsidian/02+Making+Notes+in+Obsidian/Views+in+Obsidian#Source+mode). Then, check the raw text of the `d-f-show` property. It should NOT be an empty list (`[]`). If it has bullet points, none of them should be empty.
