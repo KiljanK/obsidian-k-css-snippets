@@ -39,3 +39,16 @@
 .gallery-box-preview .dataview-frontmatter {
 	display: block !important;
 }
+
+/* Highlighting the existence of the snippet inside a note */
+.view-content:has(.dataview-frontmatter) .metadata-properties-title {
+	text-decoration: underline;
+	text-decoration-style: single;
+}
+
+.view-content:has(.dataview-frontmatter) .metadata-properties-title:after {
+	content: " (shown in preview)";
+	font-style: italic;
+	font-size: 80%;
+	opacity: 0.25;
+}
