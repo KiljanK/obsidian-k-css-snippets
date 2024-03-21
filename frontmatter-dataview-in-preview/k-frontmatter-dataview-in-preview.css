@@ -1,0 +1,55 @@
+/* Showing the YAML Frontmatter in previews, if a special dataview query is present */
+
+/* Styling the general box */
+.dataview-frontmatter {
+	display: none;
+	padding: 0.5em;
+	border-radius: 15px;
+	background-color: rgba(100, 100, 100, 0.1);
+}
+
+/* Giving less space and muted colors to the keys */
+.dataview-frontmatter td:first-of-type {
+	color: rgba(179, 179, 179, 0.55);
+	width: 30%;
+}
+
+/* Giving more space to the values */
+.dataview-frontmatter td {
+	vertical-align: baseline;
+	width: 70%;
+}
+
+/* Making nested value lists display in a wrapping row */
+.dataview-frontmatter td ul {
+	list-style-type: none;
+	padding-left: 0em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+/* Making nested value list elements tighter  */
+.dataview-frontmatter td ul li {
+	padding-left: 0em;
+}
+
+/* Only showing the whole thing in the wanted contexts */
+.markdown-embed-content .dataview-frontmatter,
+.gallery-box-preview .dataview-frontmatter {
+	display: block !important;
+}
+
+/* Highlighting the existence of the snippet inside a note */
+.view-content:has(.dataview-frontmatter) .metadata-properties-title {
+	text-decoration: underline;
+	text-decoration-style: single;
+}
+
+/* Adding a small indicator to the "Properties" section of the note */
+.view-content:has(.dataview-frontmatter) .metadata-properties-title:after {
+	content: " (shown in preview)";
+	font-style: italic;
+	font-size: 80%;
+	opacity: 0.25;
+}

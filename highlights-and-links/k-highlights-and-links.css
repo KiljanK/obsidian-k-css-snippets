@@ -1,0 +1,20 @@
+/* Making Highlighted Text more rounded and padded: */
+mark, .cm-highlight {
+	padding: 0.1em 0.4em;
+	border-radius: 5pt;
+}
+
+/* Adjusting the way Highlighted Text's "==" Symbols look: */
+.cm-formatting-highlight {
+	opacity: 0.4;
+}
+
+/* Adjusting the Default Link Colors */
+.internal-link, .external-link {
+	/* Set color attribute here, maybe use !important */
+}
+
+/* Adjusting the Default Link Colors on hover */
+.internal-link:hover, .external-link:hover {
+	/* Set color attribute here, maybe use !important */
+}
