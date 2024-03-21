@@ -13,9 +13,9 @@ This is a CSS snippet and Obsidian Template that enables a nice view of a file's
 ## Preparations:
 1. Move the CSS Snippet into your Snippets Folder
 	- Enable it under Appearance > CSS Snippets
-1. Enable the Dataview Plugin
+2. Enable the Dataview Plugin
 	-  Enable JavaScript Queries in the Plugin Settings
-2. Enable the Templates Plugin
+3. Enable the Templates Plugin
 	- Specify a Templates Folder in the Plugin Settings 
 	- Move the Template into the specified Templates Folder
 
