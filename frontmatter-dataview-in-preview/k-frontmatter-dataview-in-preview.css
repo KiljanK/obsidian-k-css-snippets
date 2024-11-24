@@ -29,9 +29,10 @@
 	gap: 0.5em;
 }
 
-/* Making nested value list elements tighter  */
+/* Making nested value list elements tighter */
 .dataview-frontmatter td ul li {
 	padding-left: 0em;
+	margin-left: 0em;
 }
 
 /* Only showing the whole thing in the wanted contexts */
