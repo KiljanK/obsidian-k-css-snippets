@@ -1,0 +1,10 @@
+/* Based on the anuppuccin checkboxes found here: https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/custom-checkboxes.scss */
+
+/* Checkbox Partial Alternative */
+
+input[data-task="h"]:checked,
+li[data-task="h"] > input:checked,
+li[data-task="h"] > p > input:checked {
+	background: linear-gradient(to right, var(--checkbox-color) 50%, transparent 50%);
+	border-width: 1px;
+}
