@@ -24,6 +24,12 @@ I simply disliked the way that links and Markdown highlights look in obsidian. T
 ![A screenshot showcasing a generic Markdown file in obsidian's preview- and edit modes. The highlighted styling is boxy and has no padding. Below, the same file is shown in both modes again, this time with rounded corners and more pleasant padding around the selections](screenshots/highlights-and-links-image-0.png)
 
 For a more detailed guide of how to install/use this feature and style the default link colors, refer to the specific [README](highlights-and-links/README.md) file.
+
+#### checkboxes
+Obsidian provides the ability to style checkboxes based on their content. Many themes provide various options, but i have found the styling of the in-progress checkboxes to be lacking. This is why i have created styling for a checkbox that is only halfway filled in.
+
+For a more detailed guide of how to install/use this feature, refer to the specific [README](checkboxes/README.md) file.
+
 ## Why not just create a Plugin?
 I am not really all that satisfied with the current state of my TypeScript code and these changes are minor enough to work as CSS snippets and Markdown templates.
 
